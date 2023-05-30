@@ -2,7 +2,7 @@
 
 Solução em PHP que utiliza o [Editor.JS](https://github.com/codex-team/editor.js) de forma mínima para uso rápido.
 
-Este sistema foi criado para que você possa fazer o uso do editor.js com PHP sem a necessidade de passar por todo o processo de instalação e configuração que existe na (documentação)[https://editorjs.io/getting-started/] do plugin oficial.
+Este sistema foi criado para que você possa fazer o uso do editor.js com PHP sem a necessidade de passar por todo o processo de instalação e configuração que existe na [documentação](https://editorjs.io/getting-started/) do plugin oficial.
 
 Uma vez que essa versão já conta com todos os arquivos e componentes necessários para a utilização rápida. Bastando apenas clonar o projeto e abrir no navegador.
 
