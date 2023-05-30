@@ -33,6 +33,7 @@ if (!file_exists($draftLocation)) {
           <span>Minimal Editor.JS <span class="message" style="font-size:14px;"></span></span>
         </a>
         <div class="d-flex">
+          <a class="btn btn-primary" style="margin-right:20px;" href="./htmlVersion.php" role="button">to HTML</a>
           <button style="margin-right:20px;" class="btn btn-success" id="saveButton">Save as JSON</button>
           <button style="margin-right:20px;" class="btn btn-warning" id="resetButton">Reset JSON</button>
         </div>
@@ -43,6 +44,8 @@ if (!file_exists($draftLocation)) {
   <div class="" style="width:100%; height:auto; padding-top:20px; padding-bottom:20px; font-size:16px;">
     <div id="editorjs"></div>
   </div>
+
+  <input type="hidden" id="jsonData" value="<?php echo htmlspecialchars(file_get_contents($draftLocation)); ?>" />
 
 </body>
 <script src="./public/assets/js/jquery.js"></script>
@@ -61,7 +64,7 @@ if (!file_exists($draftLocation)) {
 <script src="./public/assets/js/inline-code.js"></script><!-- Inline Code -->
 <script src="./public/assets/js/editor.js"></script>
 <script>
-  let dataLoaded = `<?php echo file_get_contents($draftLocation); ?>`;
+  let dataLoaded = document.getElementById("jsonData").value;
   let autoSaveSeconds = 30000;//30 seconds
 </script>
 <script src="./public/assets/js/init.js"></script>
