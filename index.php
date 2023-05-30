@@ -33,7 +33,6 @@ if (!file_exists($draftLocation)) {
           <span>Minimal Editor.JS <span class="message" style="font-size:14px;"></span></span>
         </a>
         <div class="d-flex">
-          <a class="btn btn-primary" style="margin-right:20px;" href="./htmlVersion.php" role="button">to HTML</a>
           <button style="margin-right:20px;" class="btn btn-success" id="saveButton">Save as JSON</button>
           <button style="margin-right:20px;" class="btn btn-warning" id="resetButton">Reset JSON</button>
         </div>
