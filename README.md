@@ -1,20 +1,20 @@
 # Minimal Editor.JS para PHP
 
-Solução em PHP que utiliza o (Editor.JS)[https://github.com/codex-team/editor.js] de forma mínima para uso rápido.
+Solução em PHP que utiliza o [Editor.JS](https://github.com/codex-team/editor.js) de forma mínima para uso rápido.
 
-Este sistema foi criado para que você possa fazer o uso do editor.js com PHP sem a necessidade de passar por todo o processo de instalação e configuração que existe na (documentação)[https://editorjs.io/getting-started/] do plugin oficial.
+Este sistema foi criado para que você possa fazer o uso do editor.js com PHP sem a necessidade de passar por todo o processo de instalação e configuração que existe na [documentação](https://editorjs.io/getting-started/) do plugin oficial.
 
 Uma vez que essa versão já conta com todos os arquivos e componentes necessários para a utilização rápida. Bastando apenas clonar o projeto e abrir no navegador.
 
 ## O que é o Editor.JS?
 
-O (Editor.JS)[https://github.com/codex-team/editor.js] é um editor de texto de código aberto que oferece uma variedade de recursos para ajudar os usuários a criar e formatar conteúdo com eficiência.
+O [Editor.JS](https://github.com/codex-team/editor.js) é um editor de texto de código aberto que oferece uma variedade de recursos para ajudar os usuários a criar e formatar conteúdo com eficiência.
 
 ## Como fazer a instalação?
 
 Para usar este sistema é necessário que você já tenha um ambiente de desenvolvimento PHP instalado na sua máquina local/remota.
 
-Se você estiver usando o Windows, você pode configurar um novo ambiente por meio do (XAMPP)[https://www.apachefriends.org/pt_br/index.html].
+Se você estiver usando o Windows, você pode configurar um novo ambiente por meio do [XAMPP](https://www.apachefriends.org/pt_br/index.html).
 
 Com o ambiente já configurado, basta fazer o clone deste repositório para dentro do seu ambiente (no caso do XAMPP faça isso dentro da pasta 'htdocs'):
 
