@@ -24,7 +24,7 @@ if (!file_exists($draftLocation)) {
 
 <body>
 
-  <div class="" style="width:100%; height:auto;">
+  <div class="" style="width:100%; height:auto; position:fixed; z-index:99;">
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -41,7 +41,7 @@ if (!file_exists($draftLocation)) {
   </div>
 
   <div class="" style="width:100%; height:auto; padding-top:20px; padding-bottom:20px; font-size:16px;">
-    <div id="editorjs"></div>
+    <div id="editorjs" style="margin-top:70px;"></div>
   </div>
 
   <input type="hidden" id="jsonData" value="<?php echo htmlspecialchars(file_get_contents($draftLocation)); ?>" />
