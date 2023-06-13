@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['data']) && !empty($_POST['data'])) {
         $draftLocation = './drafts/default.json';
         $myfile = fopen($draftLocation, "w") or die("Unable to open file!");
-        $txt = json_encode(array('blocks' => $_POST['data']['blocks']), JSON_UNESCAPED_SLASHES);
+        $txt = json_encode(array('blocks' => json_decode($_POST['data'], true)), JSON_UNESCAPED_SLASHES);
         fwrite($myfile, $txt);
         fclose($myfile);
     }

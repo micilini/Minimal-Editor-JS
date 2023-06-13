@@ -64,7 +64,7 @@ if (!file_exists($draftLocation)) {
 <script src="./public/assets/js/editor.js"></script>
 <script>
   let dataLoaded = document.getElementById("jsonData").value;
-  let autoSaveSeconds = 30000;//30 seconds
+  let autoSaveSeconds = 30000;//30 seconds (30000)
 </script>
 <script src="./public/assets/js/init.js"></script>
 

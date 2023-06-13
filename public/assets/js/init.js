@@ -121,10 +121,11 @@ saveButton.addEventListener('click', function () {
   const date = new Date().toLocaleString();
   editor.save()
     .then((savedData) => {
+      console.log(savedData);
       $.ajax({
         type: "POST",
         url: 'data.php',
-        data: {data : savedData},
+        data: {data : JSON.stringify(savedData['blocks'])},
         success: function (data) {
           $('.message').html('(Salvo em: ' + date + ')');
           $('.message').css('color', 'green');
