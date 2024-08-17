@@ -41,7 +41,7 @@ if (file_exists($draftLocation)) {
     </nav>
   </div>
 
-  <div class="content-draft" style="width:100%; height: calc(100vh - 52px); overflow:auto; padding:20px;; font-size:16px;"><?php echo $content; ?></div>
+  <div class="content-draft" style="width:100%; height: calc(100vh - 52px); overflow:auto; padding:20px;; font-size:16px;"><?php echo htmlspecialchars($content); ?></div>
 
 </body>
 <script>
