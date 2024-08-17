@@ -42,7 +42,7 @@ Para inserir uma imagem no editor, basta copiar e colar em uma linha em branco.
 
 ## Imagens
 
-![Tela 01](http://micilini.com/assets/img/Minimal-Editor-JS.png)
+![Tela 01](https://github.com/micilini/Minimal-Editor-JS/blob/main/public/assets/screen-01.png)
 
 
 
