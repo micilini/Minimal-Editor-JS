@@ -115,7 +115,7 @@ const toggleReadOnlyButton = document.getElementById('toggleReadOnlyButton');
 const readOnlyIndicator = document.getElementById('readonly-state');
 
 /**
- * Saving example
+ * Saving as Draft
  */
 saveButton.addEventListener('click', function () {
   const date = new Date().toLocaleString();
@@ -127,7 +127,7 @@ saveButton.addEventListener('click', function () {
         url: 'data.php',
         data: {data : JSON.stringify(savedData['blocks'])},
         success: function (data) {
-          $('.message').html('(Salvo em: ' + date + ')');
+          $('.message').html('(Save In: ' + date + ')');
           $('.message').css('color', 'green');
         },
         error: function (error) {
@@ -143,10 +143,38 @@ saveButton.addEventListener('click', function () {
 });
 
 /**
- * Reseting
+ * Saving as...
+ */
+saveAsButton.addEventListener('click', function () {
+   var fileName = prompt('Enter the file name (without extension):', '');
+   if (fileName) {
+       var fullFileName = fileName + '.json';
+        editor.save()
+            .then((savedData) => {
+                console.log(savedData);
+                $.ajax({
+                    type: "POST",
+                    url: 'data.php',
+                    data: {data : JSON.stringify(savedData['blocks']), filename: fullFileName},
+                    success: function (data) {
+                        alert('File saved successfully!');
+                    },
+                    error: function (error) {
+                        alert('Error saving file...');
+                    }
+                });
+            })
+            .catch((error) => {
+              alert('Error saving file...');
+            });
+   }
+});
+
+/**
+ * Reseting Json File (default.json)
  */
 resetButton.addEventListener('click', function () {
-  if (confirm('Tem certeza que deseja apagar esse rascunho?')) {
+  if (confirm('Are you sure you want to delete this draft?')) {
     $.ajax({
       type: "POST",
       url: 'data.php',
@@ -155,7 +183,26 @@ resetButton.addEventListener('click', function () {
         window.location.reload();
       },
       error: function (error) {
-        alert('Erro ao apagar rascunho!');
+        alert('Error deleting draft!');
+      }
+    });
+  }
+});
+
+/**
+ * Reseting Temporary Json File (inside all files /temp/ folder)
+ */
+resetTempButton.addEventListener('click', function () {
+  if (confirm('Are you sure you want to delete all draft history?')) {
+    $.ajax({
+      type: "POST",
+      url: 'data.php',
+      data: {resetTemp : true},
+      success: function (data) {
+        window.location.reload();
+      },
+      error: function (error) {
+        alert('Error deleting entire draft history!');
       }
     });
   }

@@ -1,5 +1,5 @@
 <?php
-$draftLocation = './drafts/default.json';
+$draftLocation = './data/drafts/default.json';
 
 if (!file_exists($draftLocation)) {
   $myfile = fopen($draftLocation, "w") or die("Unable to open file!");
@@ -33,8 +33,11 @@ if (!file_exists($draftLocation)) {
           <span>Minimal Editor.JS <span class="message" style="font-size:14px;"></span></span>
         </a>
         <div class="d-flex">
-          <button style="margin-right:20px;" class="btn btn-success" id="saveButton">Save as JSON</button>
-          <button style="margin-right:20px;" class="btn btn-warning" id="resetButton">Reset JSON</button>
+          <a href="./preview.php?currentDraft=true" target="__blank"><img src="./public/assets/preview.svg" alt="" class="d-inline-block align-text-top" style="margin-right:20px; width:40px;"></a>
+          <button style="margin-right:20px;" class="btn btn-success" id="saveButton">Save Draft</button>
+          <button style="margin-right:20px;" class="btn btn-info" id="saveAsButton">Save as...</button>
+          <button style="margin-right:20px;" class="btn btn-warning" id="resetButton">Reset Draft</button>
+          <button style="margin-right:20px;" class="btn btn-danger" id="resetTempButton">Reset Temp</button>
         </div>
       </div>
     </nav>

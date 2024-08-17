@@ -24,13 +24,17 @@ Em seguida, basta abrir a pasta do projeto pelo seu navegador e começar a utili
 
 ## Características
 
-Esta solução salva automáticamente a cada 30 segundos, todo o texto que foi digitado em um arquivo chamado ```default.json``` dentro da pasta ```drafts```.
+Esta solução salva automáticamente a cada 30 segundos, todo o texto que foi digitado em um arquivo chamado ```default.json``` dentro da pasta ```data/drafts```.
 
 Para alterar o tempo de salvamento automático basta modificar o valor da variável ```autoSaveSeconds``` existente dentro do arquivo ```index.php``` na linha ```65```.
 
-Salvamentos manuais também são permitidos, bastando apenas que você clique no botão ```save as json```.
+Salvamentos manuais também são permitidos, bastando apenas que você clique no botão ```Save Draft```.
 
-Para apagar todo o rascunho basta clicar no botão ```reset json```.
+Para salvar em um arquivo com um nome customizado clique no botão ```Save as...```.
+
+Para apagar todo o rascunho basta clicar no botão ```Reset Draft```.
+
+Para apagar todos os arquivos temporários existentes na pasta ```data/temp``` basta clicar no botão ```Reset Temp```.
 
 É importante ressaltar que o PHP carrega todo o conteúdo do arquivo ```default.json``` de forma automática sempre quando você acessa o arquivo ```index.php```.
 
